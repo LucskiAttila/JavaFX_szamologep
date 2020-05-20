@@ -83,6 +83,7 @@ public class CalculatorController {
             double result = calculator.calculate(number1, number2, operator);
             display.setText(String.valueOf(result));
             startNumber = false;
+            dot = true;
             operator = "";
         } else {
             if (! operator.isEmpty()) {
@@ -91,6 +92,7 @@ public class CalculatorController {
             number1 = Double.parseDouble(display.getText());
             operator = operatorPressed;
             startNumber = false;
+            dot = false;
         }
     }
 
